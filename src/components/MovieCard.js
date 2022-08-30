@@ -3,7 +3,6 @@ import React from "react";
 class MovieCard extends React.Component {
   
   render(){
-    console.log('Me called');
     const {movie} = this.props;
     
     return (
