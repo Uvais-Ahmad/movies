@@ -1,25 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-// import { Provider } from 'react';
-// import  store  from './store';
+import { createStore } from 'redux'
+
 import './index.css';
 import App from './components/App';
-// import movies from './reducers';
+import movies from './reducers';
 
-// const store = createStore(movies);
-
+const store = createStore( movies );
+console.log('Store : ',store);
+console.log('State : ' ,store.getState())
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>  
-
-  // Now using React redux
-  // <>
-  //   <Provider store = {store} >
-  //     <App />
-  //   </Provider>
-  // </>
 );
 
